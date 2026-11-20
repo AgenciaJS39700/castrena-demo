@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quesería La Castreña · Queso fresco artesano de Islares, Cantabria</title>
+<meta name="description" content="Queso fresco de vaca elaborado en Islares (Castro Urdiales). Medalla de bronce en los World Cheese Awards 2026. Envíos en frío a toda la península y recogida en tienda.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2f4a3c">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icono-180.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Quesería La Castreña">
+<meta property="og:title" content="Quesería La Castreña · Queso fresco artesano de Islares">
+<meta property="og:description" content="Queso fresco de vaca hecho cada día en Islares. Medalla de bronce en los World Cheese Awards 2026. Envíos en frío a toda la península en 24 h.">
+<meta property="og:image" content="img/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --crema:#faf6ef; --papel:#fffdf9; --verde:#2f4a3c; --verde-claro:#3f6450;
+  --oro:#b8932f; --oro-claro:#e8d9a8; --tinta:#2a2520; --gris:#6b6358; --linea:#e8e0d2;
+  --sombra:0 1px 2px rgba(42,37,32,.06), 0 8px 24px rgba(42,37,32,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--crema);color:var(--tinta);font-size:16.5px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* avisos demo */
+.demo-bar{background:var(--verde);color:#fff;text-align:center;font-size:.8rem;padding:.5rem 1rem;font-weight:600;letter-spacing:.01em}
+.demo-bar b{color:var(--oro-claro)}
+
+/* cabecera */
+header{position:sticky;top:0;z-index:60;background:rgba(250,246,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.hd{display:flex;align-items:center;gap:1rem;height:66px}
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex:none}
+.logo .mk{width:38px;height:38px;flex:none}
+.logo b{font-family:Fraunces,serif;font-size:1.08rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;display:block}
+.logo span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);font-weight:700}
+nav{margin-left:auto;display:flex;gap:1.6rem;align-items:center}
+.hd>.cart-btn{flex:none;margin-left:1rem}
+nav a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--tinta);opacity:.8}
+nav a:hover{opacity:1;color:var(--verde)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:999px;padding:.72rem 1.4rem;font:inherit;font-weight:700;font-size:.93rem;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn-p{background:var(--verde);color:#fff}
+.btn-p:hover{background:var(--verde-claro)}
+.btn-o{background:transparent;color:var(--verde);border:1.5px solid var(--verde)}
+.btn-o:hover{background:var(--verde);color:#fff}
+.btn-sm{padding:.5rem 1rem;font-size:.86rem}
+.cart-btn{position:relative;background:var(--verde);color:#fff;border:0;border-radius:999px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.cart-n{position:absolute;top:-4px;right:-4px;background:var(--oro);color:#1d1a16;font-size:.7rem;font-weight:800;min-width:20px;height:20px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 5px}
+.cart-n[hidden]{display:none!important}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+
+/* hero */
+.hero{padding:3.2rem 0 2.6rem;position:relative;overflow:hidden}
+.hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.medalla{display:inline-flex;align-items:center;gap:.6rem;background:#fff;border:1px solid var(--oro-claro);border-radius:999px;padding:.42rem .95rem .42rem .5rem;font-size:.83rem;font-weight:700;color:#7a5f14;box-shadow:var(--sombra);margin-bottom:1.3rem}
+.medalla svg{flex:none}
+.hero h1{font-size:clamp(2.3rem,5.2vw,3.5rem);margin-bottom:1.1rem}
+.hero h1 em{font-style:italic;color:var(--verde)}
+.hero p.lead{font-size:1.13rem;color:var(--gris);max-width:30rem;margin-bottom:1.8rem}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.estrellas{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--gris)}
+.estrellas b{color:var(--tinta)}
+.hero-art{position:relative}
+.hero-art img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:var(--sombra)}
+.hero-sello{position:absolute;right:-10px;bottom:-14px;background:#fff;border:1px solid var(--oro-claro);border-radius:16px;padding:.7rem .95rem;display:flex;align-items:center;gap:.6rem;box-shadow:var(--sombra);max-width:14rem}
+.hero-sello b{font-family:Fraunces,serif;font-size:.95rem;display:block;line-height:1.2}
+.hero-sello span{font-size:.72rem;color:var(--gris);line-height:1.3}
+
+/* obrador */
+.obrador{margin:0 0 2.6rem;border-radius:20px;overflow:hidden;box-shadow:var(--sombra);background:#fff}
+.obrador img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.obrador figcaption{padding:.9rem 1.2rem;font-size:.9rem;color:var(--gris);text-align:center}
+
+/* páginas legales */
+.legal-ov{position:fixed;inset:0;background:rgba(26,22,18,.55);z-index:90;display:none;padding:4vh 16px;overflow-y:auto}
+.legal-ov.on{display:block}
+.legal-c{background:var(--papel);max-width:50rem;margin:0 auto;border-radius:20px;padding:2rem 2rem 2.4rem;position:relative}
+.legal-c h2{font-size:1.7rem;margin-bottom:.4rem}
+.legal-c h3{font-size:1.05rem;margin:1.5rem 0 .45rem}
+.legal-c p,.legal-c li{font-size:.94rem;color:#443d35;margin-bottom:.6rem}
+.legal-c ul{padding-left:1.1rem}
+.legal-c .res{background:#f3ead8;border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0}
+.legal-x{position:absolute;top:1rem;right:1rem;background:var(--crema);border:1px solid var(--linea);width:38px;height:38px;border-radius:999px;font-size:1.3rem;cursor:pointer;line-height:1}
+.pend{background:#fff4d6;border:1px dashed var(--oro);border-radius:10px;padding:.7rem .9rem;font-size:.87rem}
+
+/* aviso de cookies */
+.ck{position:fixed;left:16px;right:16px;bottom:16px;max-width:36rem;margin:0 auto;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:1.1rem 1.2rem;box-shadow:0 10px 40px rgba(42,37,32,.18);z-index:95;display:none}
+.ck.on{display:block}
+.ck p{font-size:.88rem;color:var(--gris);margin-bottom:.9rem}
+.ck-b{display:flex;gap:.6rem;flex-wrap:wrap}
+.ck-b button{flex:1;min-width:9rem;padding:.6rem 1rem;border-radius:999px;font-weight:700;font-size:.9rem;cursor:pointer;border:1px solid var(--verde)}
+.ck-si{background:var(--verde);color:#fff}
+.ck-no{background:#fff;color:var(--verde)}
+
+/* mapa que espera permiso */
+.ubi-m{margin-top:1.2rem;border-radius:14px;overflow:hidden;border:1px solid var(--linea)}
+.ubi-m iframe{width:100%;height:230px;border:0;display:block}
+.mapa-off{background:#f3ead8;padding:1.4rem;text-align:center}
+.mapa-off p{font-size:.87rem;color:var(--gris);margin-bottom:.8rem}
+.mapa-b{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+.mapa-b button,.mapa-b a{font-size:.85rem;font-weight:700;padding:.5rem .9rem;border-radius:999px;cursor:pointer;text-decoration:none;border:1px solid var(--verde);background:#fff;color:var(--verde)}
+
+/* foco visible en todo */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--oro);outline-offset:2px;border-radius:6px}
+
+/* secciones */
+section{padding:4rem 0}
+.sec-h{text-align:center;max-width:40rem;margin:0 auto 2.6rem}
+.kick{font-size:.73rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--oro);margin-bottom:.7rem}
+.sec-h h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:.7rem}
+.sec-h p{color:var(--gris);font-size:1.03rem}
+
+/* tienda */
+#tienda{background:var(--papel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1.4rem}
+.pr{background:var(--crema);border:1px solid var(--linea);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.pr:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.pr-im{aspect-ratio:4/3;background:linear-gradient(160deg,#f3ead8,#e7dcc4);position:relative;overflow:hidden}
+.pr-im img{width:100%;height:100%;object-fit:cover}
+.pr-b{position:absolute;top:10px;left:10px;background:var(--verde);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.28rem .6rem;border-radius:999px}
+.pr-b.oro{background:var(--oro);color:#1d1a16}
+.pr-in{padding:1.1rem 1.15rem 1.2rem;display:flex;flex-direction:column;flex:1}
+.pr-in h3{font-size:1.12rem;margin-bottom:.3rem}
+.pr-d{font-size:.87rem;color:var(--gris);margin-bottom:.9rem;flex:1}
+.pr-f{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.precio{font-family:Fraunces,serif;font-size:1.3rem;font-weight:700}
+.precio small{font-size:.72rem;color:var(--gris);font-weight:400;display:block;font-family:Figtree,sans-serif;margin-top:-2px}
+.qty{display:flex;align-items:center;gap:.1rem;background:var(--verde);border-radius:999px;padding:3px}
+.qty button{background:none;border:0;color:#fff;width:30px;height:30px;font-size:1.1rem;cursor:pointer;border-radius:999px;display:flex;align-items:center;justify-content:center}
+.qty button:hover{background:rgba(255,255,255,.18)}
+.qty span{color:#fff;font-weight:800;min-width:20px;text-align:center;font-size:.92rem}
+.nota-precio{text-align:center;margin-top:1.8rem;font-size:.86rem;color:var(--gris);background:#fff;border:1px dashed var(--oro-claro);border-radius:12px;padding:.85rem 1.2rem;max-width:44rem;margin-inline:auto}
+
+/* envíos: el bloque fuerte */
+#envios{background:var(--verde);color:#fff}
+#envios .kick{color:var(--oro-claro)}
+#envios .sec-h h2{color:#fff}
+#envios .sec-h p{color:#cdddd2}
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.2rem;margin-bottom:2.4rem}
+.paso{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:1.3rem 1.3rem 1.4rem}
+.paso .n{width:34px;height:34px;border-radius:999px;background:var(--oro);color:#1d1a16;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem;font-size:.95rem}
+.paso h3{font-size:1.04rem;color:#fff;margin-bottom:.35rem}
+.paso p{font-size:.89rem;color:#cdddd2}
+.env-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.env-c{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:1.4rem 1.5rem}
+.env-c h3{color:#fff;font-size:1.1rem;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.env-c ul{list-style:none}
+.env-c li{display:flex;gap:.65rem;padding:.42rem 0;font-size:.92rem;color:#dce9e1;border-bottom:1px solid rgba(255,255,255,.09)}
+.env-c li:last-child{border:0}
+.env-c li b{color:#fff;margin-left:auto;text-align:right;white-space:nowrap}
+.aviso-env{margin-top:1.6rem;background:rgba(232,217,168,.13);border:1px solid rgba(232,217,168,.3);border-radius:14px;padding:1.1rem 1.3rem;font-size:.92rem;color:#efe6cd}
+.aviso-env b{color:#fff}
+
+/* opiniones */
+.ops{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:1.3rem}
+.op{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:1.4rem 1.5rem}
+.op .st{color:var(--oro);font-size:.95rem;letter-spacing:.1em;margin-bottom:.6rem}
+.op p{font-size:.96rem;margin-bottom:.8rem}
+.op cite{font-size:.82rem;color:var(--gris);font-style:normal;font-weight:600}
+
+/* tiendas */
+.tiendas{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.tienda{background:var(--papel);border:1px solid var(--linea);border-radius:18px;padding:1.6rem 1.7rem}
+.tienda h3{font-size:1.25rem;margin-bottom:.2rem}
+.tienda .mun{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--oro);font-weight:800;margin-bottom:.9rem}
+.tienda dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:.92rem;margin-bottom:1.1rem}
+.tienda dt{color:var(--gris);font-weight:600}
+.tienda dd{font-weight:600}
+
+/* faq */
+details{background:var(--papel);border:1px solid var(--linea);border-radius:14px;margin-bottom:.7rem;overflow:hidden}
+summary{padding:1.05rem 1.3rem;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;font-size:.98rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--oro);font-weight:400;line-height:1}
+details[open] summary::after{content:"−"}
+details p{padding:0 1.3rem 1.2rem;color:var(--gris);font-size:.94rem}
+
+/* pie */
+footer{background:var(--tinta);color:#d6cfc4;padding:3rem 0 1.6rem;font-size:.92rem}
+.ft-g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.4rem;margin-bottom:2.2rem}
+footer h4{font-family:Figtree,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-claro);margin-bottom:.9rem;font-weight:800}
+footer a{color:#d6cfc4;text-decoration:none;display:inline-flex;min-height:30px;align-items:center}
+footer a:hover{color:#fff}
+.ft-l{display:flex;flex-direction:column}
+.ft-b{border-top:1px solid rgba(255,255,255,.12);padding-top:1.3rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:#9d958a}
+.ft-b a{color:#9d958a;font-size:.82rem}
+
+/* carrito */
+.ov{position:fixed;inset:0;background:rgba(30,26,22,.55);opacity:0;pointer-events:none;transition:opacity .25s;z-index:90}
+.ov.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--crema);z-index:100;transform:translateX(102%);transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+.dr.on{transform:none}
+.dr-h{padding:1.2rem 1.3rem;border-bottom:1px solid var(--linea);display:flex;align-items:center;justify-content:space-between;flex:none}
+.dr-h h3{font-size:1.2rem}
+.dr-b{flex:1;overflow-y:auto;padding:1.1rem 1.3rem}
+.dr-f{border-top:1px solid var(--linea);padding:1.2rem 1.3rem;flex:none;background:var(--papel)}
+.li{display:grid;grid-template-columns:56px 1fr;gap:.85rem;padding:.85rem 0;border-bottom:1px solid var(--linea)}
+.li-im{width:56px;height:56px;border-radius:11px;background:linear-gradient(160deg,#f3ead8,#e7dcc4);overflow:hidden;flex:none}
+.li-im img{width:100%;height:100%;object-fit:cover}
+.li h4{font-size:.95rem;font-family:Figtree,sans-serif;font-weight:700;margin-bottom:.15rem}
+.li .li-p{font-size:.84rem;color:var(--gris);margin-bottom:.45rem}
+.li .qty{background:var(--linea);width:fit-content}
+.li .qty button{color:var(--tinta);width:26px;height:26px}
+.li .qty span{color:var(--tinta);font-size:.86rem}
+.vacio{text-align:center;padding:3rem 1rem;color:var(--gris)}
+.env-op{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1rem}
+.env-op label{display:flex;gap:.7rem;align-items:flex-start;background:var(--papel);border:1.5px solid var(--linea);border-radius:12px;padding:.8rem .9rem;cursor:pointer;font-size:.9rem}
+.env-op label:has(input:checked){border-color:var(--verde);background:#fff}
+.env-op input{margin-top:.25rem;accent-color:var(--verde)}
+.env-op b{display:block}
+.env-op small{color:var(--gris);display:block;font-size:.81rem}
+.tot{display:flex;justify-content:space-between;font-size:.92rem;padding:.25rem 0;color:var(--gris)}
+.tot.big{font-size:1.18rem;font-weight:800;color:var(--tinta);border-top:1px solid var(--linea);margin-top:.5rem;padding-top:.7rem}
+.tot.big span:last-child{font-family:Fraunces,serif}
+
+/* pago simulado */
+.pay{position:fixed;inset:0;background:#f7f7f8;z-index:120;display:none;overflow-y:auto}
+.pay.on{display:block}
+.pay-in{max-width:430px;margin:0 auto;padding:2.5rem 1.25rem 3rem}
+.pay-card{background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);padding:1.7rem;margin-top:1.2rem}
+.pay h3{font-family:Figtree,sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:1.1rem}
+.campo{margin-bottom:.9rem}
+.campo label{display:block;font-size:.8rem;font-weight:700;color:#4a4a52;margin-bottom:.3rem}
+.campo input{width:100%;border:1px solid #dcdce1;border-radius:9px;padding:.7rem .85rem;font:inherit;font-size:.95rem;background:#fff}
+.campo input:focus{outline:2px solid var(--verde);outline-offset:-1px;border-color:var(--verde)}
+.campo-2{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.pay-tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem;padding:1rem 0;border-top:1px solid #ececed;margin-top:.6rem}
+.pay-ok{text-align:center;padding:2.5rem 1rem}
+.pay-ok .tick{width:72px;height:72px;border-radius:999px;background:var(--verde);display:flex;align-items:center;justify-content:center;margin:0 auto 1.3rem}
+.pay-ok h2{font-size:1.7rem;margin-bottom:.6rem}
+.pay-ok p{color:var(--gris);margin-bottom:1.6rem}
+.pay-demo{background:#fff4d6;border:1px solid #e8d9a8;border-radius:10px;padding:.7rem .9rem;font-size:.82rem;color:#7a5f14;text-align:center;margin-bottom:1rem;font-weight:600}
+
+/* wa */
+.wa{position:fixed;right:16px;bottom:16px;width:54px;height:54px;border-radius:999px;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.22);z-index:70}
+
+@media(max-width:860px){
+  .hero-sello{display:none}
+  .legal-c{padding:1.6rem 1.3rem 2rem}
+  .hero-g,.env-g,.tiendas,.ft-g{grid-template-columns:1fr}
+  .hero-g{gap:2rem}
+  .hero-art{order:-1}
+  nav{display:none}
+  .hd>.cart-btn{margin-left:auto}
+  .burger{display:block;margin-left:.3rem}
+  nav.on{display:flex;position:absolute;top:66px;left:0;right:0;background:var(--crema);flex-direction:column;gap:0;padding:.5rem 20px 1rem;border-bottom:1px solid var(--linea)}
+  nav.on a{padding:.75rem 0;border-bottom:1px solid var(--linea);width:100%}
+  section{padding:3rem 0}
+  .ft-g{gap:1.6rem}
+}
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr 1fr;gap:.9rem}
+  .pr-in{padding:.8rem .85rem 1rem}
+  .pr-in h3{font-size:.98rem}
+  .pr-d{font-size:.8rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .pr-f{flex-direction:column;align-items:stretch;gap:.5rem}
+  .qty{width:100%;justify-content:space-between}
+  .precio{font-size:1.15rem}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Demo de ejemplo preparada por Agencia JS · <b>los precios y las condiciones de envío son orientativos</b>, pendientes de confirmar con la quesería</div>
+
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#">
+   <svg class="mk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2f4a3c"/><path d="M11 23.5c0-4.7 4-8.5 9-8.5s9 3.8 9 8.5v2.2a1 1 0 0 1-1 1H12a1 1 0 0 1-1-1z" fill="#f3ead8"/><circle cx="16" cy="21.5" r="1.5" fill="#2f4a3c"/><circle cx="23" cy="23" r="1.1" fill="#2f4a3c"/><circle cx="20.5" cy="19" r=".9" fill="#2f4a3c"/><path d="M20 15v-2.5M20 12.5l-2-2M20 12.5l2-2" stroke="#b8932f" stroke-width="1.6" stroke-linecap="round"/></svg>
+   <span style="display:block"><b>La Castreña</b><span>Quesería · Islares</span></span>
+  </a>
+  <nav id="nav">
+   <a href="#tienda">Tienda</a>
+   <a href="#envios">Envíos</a>
+   <a href="#nosotros">Quiénes somos</a>
+   <a href="#tiendas">Dónde estamos</a>
+  </nav>
+  <button class="cart-btn" id="abrir-carrito" aria-label="Ver el carrito">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <span class="cart-n" id="cart-n" hidden>0</span>
+   </button>
+  <button class="burger" id="burger" aria-label="Menú"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2a2520" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+ </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+ <div class="wrap hero-g">
+  <div>
+   <div class="medalla">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="6" fill="#cd7f32"/><circle cx="12" cy="9" r="4" fill="#e3a35e"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5" stroke="#b8932f" stroke-width="1.6" stroke-linejoin="round" fill="none"/></svg>
+    Bronce en los World Cheese Awards 2026
+   </div>
+   <h1>El queso fresco que se <em>deshace en la boca</em></h1>
+   <p class="lead">Lo hacemos cada día en Islares, con leche de vaca y las manos de siempre. Ahora también te lo mandamos a casa, en frío y en 24 horas.</p>
+   <div class="hero-cta">
+    <a class="btn btn-p" href="#tienda">Ver la tienda</a>
+    <a class="btn btn-o" href="#envios">Cómo lo enviamos</a>
+   </div>
+   <div class="estrellas">
+    <span style="color:#b8932f;letter-spacing:.08em">★★★★★</span>
+    <span><b>4,7 sobre 5</b> · 34 opiniones en Google</span>
+   </div>
+  </div>
+  <div class="hero-art">
+   <img src="img/hero.webp" width="1600" height="1195" fetchpriority="high" decoding="async"
+        alt="Queso fresco recién desmoldado sobre una tabla de madera, en la cocina de la quesería">
+   <div class="hero-sello">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9" r="6" fill="#cd7f32"/><circle cx="12" cy="9" r="4" fill="#e3a35e"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5" stroke="#b8932f" stroke-width="1.6" stroke-linejoin="round" fill="none"/></svg>
+    <span><b>Bronce 2026</b>World Cheese Awards</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<!-- TIENDA -->
+<section id="tienda">
+ <div class="wrap">
+  <div class="sec-h">
+   <p class="kick">La tienda</p>
+   <h2>Nuestro obrador, en tu nevera</h2>
+   <p>Todo se elabora en Islares. Lo que pidas antes de las 12:00 se prepara ese mismo día.</p>
+  </div>
+  <div class="grid" id="catalogo"></div>
+  <p class="nota-precio"><b>Aviso de la demo:</b> estos precios son un ejemplo para que se vea cómo funciona la tienda. Los definitivos los pone la quesería.</p>
+ </div>
+</section>
+
+<!-- ENVÍOS -->
+<section id="envios">
+ <div class="wrap">
+  <div class="sec-h">
+   <p class="kick">Lo importante</p>
+   <h2>Cómo viaja un queso fresco</h2>
+   <p>El queso fresco dura poco y no admite tonterías. Por eso lo mandamos así.</p>
+  </div>
+
+  <div class="pasos">
+   <div class="paso"><div class="n">1</div><h3>Se hace el mismo día</h3><p>No tenemos stock esperando en una cámara. Tu queso se elabora la mañana en que sale tu pedido.</p></div>
+   <div class="paso"><div class="n">2</div><h3>Caja isotérmica y hielo</h3><p>Va en su tarrina con suero, dentro de una caja con acumuladores de frío que aguantan todo el trayecto.</p></div>
+   <div class="paso"><div class="n">3</div><h3>Sale lunes, martes o miércoles</h3><p>Así nunca pasa un fin de semana en un almacén. Es la única forma de que llegue como salió.</p></div>
+   <div class="paso"><div class="n">4</div><h3>En casa en 24 horas</h3><p>Entrega al día siguiente en la península. Te avisamos con el número de seguimiento en cuanto sale.</p></div>
+  </div>
+
+  <div class="env-g">
+   <div class="env-c">
+    <h3>🚚 Envío a casa</h3>
+    <ul>
+     <li>Península <b>6,90 €</b></li>
+     <li>A partir de 45 € <b>Gratis</b></li>
+     <li>Plazo de entrega <b>24 h</b></li>
+     <li>Días de salida <b>L · M · X</b></li>
+     <li>Baleares y Canarias <b>No, por ahora</b></li>
+    </ul>
+   </div>
+   <div class="env-c">
+    <h3>🧺 Recogida en tienda</h3>
+    <ul>
+     <li>En Islares <b>Gratis</b></li>
+     <li>En Sestao <b>Gratis</b></li>
+     <li>Listo para recoger <b>En 2 horas</b></li>
+     <li>Te avisamos por <b>WhatsApp</b></li>
+     <li>Puedes pagar al recoger <b>Sí</b></li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="aviso-env">
+   <b>¿Por qué no mandamos a Baleares y Canarias?</b> Porque el queso fresco tarda más de un día en llegar y no queremos que te llegue en malas condiciones. Si vives allí y te interesa, escríbenos: estamos buscando la forma de hacerlo bien.
+  </div>
+ </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+ <div class="wrap">
+  <div class="sec-h">
+   <p class="kick">Quiénes somos</p>
+   <h2>Una quesería de pueblo con una medalla internacional</h2>
+   <p>Estamos en Islares, en Castro Urdiales. En noviembre de 2026 nuestro queso fresco de vaca tipo Burgos se llevó el <b>bronce en los World Cheese Awards</b> celebrados en Córdoba, entre quesos de todo el mundo.</p>
+  </div>
+  <figure class="obrador">
+   <img src="img/obrador.webp" width="1600" height="893" loading="lazy" decoding="async"
+        alt="Interior del obrador: moldes de queso escurriendo sobre la mesa de acero junto a la cuba de cuajada">
+   <figcaption>Así se hace cada mañana: la cuajada, los moldes y el suero escurriendo. Nada más.</figcaption>
+  </figure>
+  <div class="ops">
+   <div class="op"><div class="st">★★★★★</div><p>«Qué queso fresco más rico… se deshace en la boca.»</p><cite>Opinión en Google</cite></div>
+   <div class="op"><div class="st">★★★★★</div><p>«He probado los de La Bien Aparecida, La Arboleda y Santi, y para mí este es el mejor.»</p><cite>Opinión en Google</cite></div>
+   <div class="op"><div class="st">★★★★★</div><p>«Me crié entre vacas, y su queso fresco es como el que hacía mi madre. Y tienen el mejor membrillo que he probado.»</p><cite>Opinión en Google</cite></div>
+  </div>
+ </div>
+</section>
+
+<!-- TIENDAS -->
+<section id="tiendas" style="background:var(--papel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)">
+ <div class="wrap">
+  <div class="sec-h">
+   <p class="kick">Dónde estamos</p>
+   <h2>Ven a buscarlo</h2>
+   <p>Si lo prefieres, haz el pedido por la web y recógelo sin pagar envío.</p>
+  </div>
+  <div class="tiendas">
+   <div class="tienda">
+    <h3>El obrador</h3>
+    <p class="mun">Islares · Castro Urdiales</p>
+    <dl>
+     <dt>Dirección</dt><dd>Barrio Islares, 118 · 39798</dd>
+     <dt>Horario</dt><dd>Todos los días, de 9:00 a 21:00</dd>
+     <dt>Teléfono</dt><dd><a href="tel:+34699579993" style="text-decoration:none;color:var(--verde)">699 57 99 93</a></dd>
+    </dl>
+    <a class="btn btn-o btn-sm" href="https://www.google.com/maps/search/?api=1&query=Quesería%20La%20Castreña%2C%20Barrio%20Islares%20118%2C%2039798%20Islares" target="_blank" rel="noopener">Cómo llegar</a>
+   </div>
+   <div class="tienda">
+    <h3>La tienda</h3>
+    <p class="mun">Sestao · Bizkaia</p>
+    <dl>
+     <dt>Dirección</dt><dd>Plaza San Pedro, Markonzaga · 48910</dd>
+     <dt>Horario</dt><dd>Martes, jueves y sábado, de 9:30 a 14:30</dd>
+     <dt>Queso fresco</dt><dd>Llega esos tres días</dd>
+    </dl>
+    <a class="btn btn-o btn-sm" href="https://www.google.com/maps/search/?api=1&query=Quesería%20La%20Castreña%2C%20Plaza%20San%20Pedro%2C%20Markonzaga%2C%2048910%20Sestao" target="_blank" rel="noopener">Cómo llegar</a>
+   </div>
+  </div>
+  <div class="ubi-m" data-mapa="https://www.google.com/maps?q=43.390,-3.293&z=14&output=embed"
+       data-comollegar="https://www.google.com/maps/search/?api=1&query=Quesería%20La%20Castreña%2C%20Barrio%20Islares%20118%2C%2039798%20Islares"
+       data-titulo="Mapa con la ubicación del obrador de Islares"></div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+ <div class="wrap" style="max-width:780px">
+  <div class="sec-h"><p class="kick">Dudas</p><h2>Lo que más nos preguntáis</h2></div>
+  <details open><summary>¿Cuánto aguanta el queso fresco?</summary><p>Unos días en la nevera, siempre en su tarrina y con su suero. Es un queso sin conservantes: lo que gana en sabor lo pierde en vida. Por eso lo elaboramos el mismo día que sale tu pedido.</p></details>
+  <details><summary>¿Y si no estoy en casa cuando llegue?</summary><p>El transportista te avisa antes de salir a repartir y puedes cambiar la entrega. Si no hay nadie, lo intenta al día siguiente, pero con producto fresco conviene estar: por eso te mandamos el seguimiento en cuanto sale.</p></details>
+  <details><summary>¿Puedo pedir una cantidad concreta en kilos?</summary><p>Sí. Llámanos al 699 57 99 93 o escríbenos por WhatsApp y te preparamos lo que necesites, también para hostelería o para una celebración.</p></details>
+  <details><summary>¿Hacéis envíos a Baleares o Canarias?</summary><p>Por ahora no. El queso fresco tardaría más de un día en llegar y no saldría bien. Escríbenos y te avisamos si lo conseguimos.</p></details>
+  <details><summary>¿El precio incluye la tarrina?</summary><p>Sí. El precio que ves es lo que pagas: queso, tarrina, suero y caja de envío incluidos. Sin sorpresas al llegar a caja.</p></details>
+  <details><summary>¿Tenéis más productos además del queso?</summary><p>Hacemos también dulce de membrillo artesano, que marida de maravilla con el queso fresco. Y en temporada nos encontrarás en ferias por toda Cantabria.</p></details>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="ft-g">
+   <div>
+    <div class="logo" style="margin-bottom:.9rem">
+     <svg class="mk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#3f6450"/><path d="M11 23.5c0-4.7 4-8.5 9-8.5s9 3.8 9 8.5v2.2a1 1 0 0 1-1 1H12a1 1 0 0 1-1-1z" fill="#f3ead8"/><circle cx="16" cy="21.5" r="1.5" fill="#3f6450"/><circle cx="23" cy="23" r="1.1" fill="#3f6450"/></svg>
+     <span><b style="color:#fff">La Castreña</b><span style="color:#9d958a">Quesería · Islares</span></span>
+    </div>
+    <p style="max-width:22rem">Queso fresco de vaca elaborado cada día en Islares, Castro Urdiales. Bronce en los World Cheese Awards 2026.</p>
+   </div>
+   <div><h4>La tienda</h4><div class="ft-l"><a href="#tienda">Productos</a><a href="#envios">Envíos y recogida</a><a href="#faq">Preguntas frecuentes</a></div></div>
+   <div><h4>Contacto</h4><div class="ft-l"><a href="tel:+34699579993">699 57 99 93</a><a href="https://wa.me/34699579993" target="_blank" rel="noopener">WhatsApp</a><a href="#tiendas">Islares y Sestao</a></div></div>
+  </div>
+  <div class="ft-b">
+   <span>Demo sin valor comercial · Quesería La Castreña</span>
+   <span><a href="#" data-legal="aviso">Aviso legal</a> · <a href="#" data-legal="privacidad">Privacidad</a> · <a href="#" data-legal="cookies">Cookies</a> · <a href="#" data-cookies>Preferencias</a> · Diseño web por <a href="https://agencia-js.com" target="_blank" rel="noopener">Agencia JS</a></span>
+  </div>
+ </div>
+</footer>
+
+<a class="wa" href="https://wa.me/34699579993" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+ <svg width="27" height="27" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-1 1.1c-.2.2-.4.2-.7 0-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<!-- CARRITO -->
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" aria-label="Carrito">
+ <div class="dr-h">
+  <h3>Tu pedido</h3>
+  <button class="btn btn-o btn-sm" id="cerrar-carrito">Cerrar</button>
+ </div>
+ <div class="dr-b" id="dr-b"></div>
+ <div class="dr-f" id="dr-f" hidden>
+  <div class="env-op" id="env-op">
+   <label><input type="radio" name="env" value="envio" checked><span><b>Envío a casa · 6,90 €</b><small>Península. Gratis a partir de 45 €. Sale lunes, martes o miércoles.</small></span></label>
+   <label><input type="radio" name="env" value="recogida"><span><b>Recogida en tienda · Gratis</b><small>En Islares o en Sestao. Listo en 2 horas.</small></span></label>
+  </div>
+  <div class="tot"><span>Productos</span><span id="t-sub">0,00 €</span></div>
+  <div class="tot"><span id="t-env-l">Envío</span><span id="t-env">6,90 €</span></div>
+  <div class="tot big"><span>Total</span><span id="t-tot">0,00 €</span></div>
+  <button class="btn btn-p" id="ir-pagar" style="width:100%;margin-top:1rem">Finalizar pedido</button>
+ </div>
+</aside>
+
+<!-- PAGO SIMULADO -->
+<div class="pay" id="pay">
+ <div class="pay-in" id="pay-in">
+  <button class="btn btn-o btn-sm" id="pay-volver">← Volver al carrito</button>
+  <div class="pay-card">
+   <div class="pay-demo">Pago de ejemplo · no se cobra nada</div>
+   <h3>Finalizar compra</h3>
+   <div class="campo"><label for="c-mail">Correo electrónico</label><input id="c-mail" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email"></div>
+   <div class="campo"><label for="c-nom">Nombre y apellidos</label><input id="c-nom" type="text" placeholder="Nombre Apellidos" autocomplete="name"></div>
+   <div class="campo" id="campo-dir"><label for="c-dir">Dirección de entrega</label><input id="c-dir" type="text" placeholder="Calle, número, piso" autocomplete="street-address"></div>
+   <div class="campo-2" id="campo-cp">
+    <div class="campo"><label for="c-cp">Código postal</label><input id="c-cp" type="text" inputmode="numeric" placeholder="39700"></div>
+    <div class="campo"><label for="c-loc">Localidad</label><input id="c-loc" type="text" placeholder="Castro Urdiales"></div>
+   </div>
+   <h3 style="margin-top:1.4rem">Tarjeta</h3>
+   <div class="campo"><label for="c-tar">Número de tarjeta</label><input id="c-tar" type="text" inputmode="numeric" placeholder="4242 4242 4242 4242" value="4242 4242 4242 4242"></div>
+   <div class="campo-2">
+    <div class="campo"><label for="c-cad">Caducidad</label><input id="c-cad" type="text" placeholder="12/30" value="12/30"></div>
+    <div class="campo"><label for="c-cvc">CVC</label><input id="c-cvc" type="text" inputmode="numeric" placeholder="123" value="123"></div>
+   </div>
+   <div class="pay-tot"><span>Total</span><span id="p-tot">0,00 €</span></div>
+   <button class="btn btn-p" id="pagar" style="width:100%">Pagar</button>
+  </div>
+ </div>
+ <div class="pay-in pay-ok" id="pay-ok" style="display:none">
+  <div class="tick"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+  <h2>¡Pedido confirmado!</h2>
+  <p id="ok-txt">Te hemos mandado un correo con el resumen. Tu queso se elabora la mañana del envío.</p>
+  <button class="btn btn-p" id="ok-cerrar">Seguir mirando</button>
+ </div>
+</div>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": ["Store","FoodEstablishment"],
+   "@id": "#obrador",
+   "name": "Quesería La Castreña",
+   "description": "Quesería artesana de queso fresco de vaca en Islares, Castro Urdiales. Medalla de bronce en los World Cheese Awards 2026.",
+   "image": "img/hero.webp",
+   "telephone": "+34699579993",
+   "priceRange": "€",
+   "servesCuisine": "Quesos artesanos",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Barrio Islares, 118",
+    "addressLocality": "Islares",
+    "addressRegion": "Cantabria",
+    "postalCode": "39798",
+    "addressCountry": "ES"
+   },
+   "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00", "closes": "21:00"
+   }],
+   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "34" }
+  },
+  {
+   "@type": "Store",
+   "@id": "#sestao",
+   "name": "Quesería La Castreña · Sestao",
+   "parentOrganization": { "@id": "#obrador" },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaza San Pedro, Markonzaga",
+    "addressLocality": "Sestao",
+    "addressRegion": "Bizkaia",
+    "postalCode": "48910",
+    "addressCountry": "ES"
+   },
+   "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Tuesday","Thursday","Saturday"],
+    "opens": "09:30", "closes": "14:30"
+   }]
+  }
+ ]
+}
+</script>
+
+<!-- PÁGINAS LEGALES -->
+<div class="legal-ov" id="legal-ov" role="dialog" aria-modal="true" aria-labelledby="legal-t">
+ <div class="legal-c">
+  <button class="legal-x" id="legal-x" aria-label="Cerrar">×</button>
+  <div id="legal-body"></div>
+ </div>
+</div>
+
+<!-- AVISO DE COOKIES -->
+<div class="ck" id="ck" role="region" aria-label="Aviso de cookies">
+ <p>Esta web <b>no usa analítica ni publicidad</b>, y no te sigue por ningún sitio. Lo único que deja cookies de terceros es el mapa de Google, así que no lo cargamos hasta que tú lo digas.</p>
+ <div class="ck-b">
+  <button class="ck-si" id="ck-si">Cargar el mapa</button>
+  <button class="ck-no" id="ck-no">Mejor no</button>
+ </div>
+</div>
+
+<script>
+const LEGAL = {
+ aviso: `<h2 id="legal-t">Aviso legal</h2>
+  <div class="res">En resumen: esta web es la tienda online de Quesería La Castreña. Aquí puedes comprar queso y membrillo, y recibirlos en casa o recogerlos en tienda.</div>
+  <div class="pend"><b>Pendiente del cliente:</b> denominación fiscal exacta, NIF, domicilio social y número de registro sanitario. Hasta tenerlos, esta web no se publica.</div>
+  <h3>Titular</h3>
+  <p>Quesería La Castreña · Barrio Islares, 118 · 39798 Islares (Castro Urdiales, Cantabria) · Teléfono 699 57 99 93.</p>
+  <h3>Qué puedes hacer aquí</h3>
+  <p>Ver nuestros productos, hacer un pedido y pagarlo, o reservarlo para recogerlo en el obrador de Islares o en la tienda de Sestao.</p>
+  <h3>Pedidos y envíos</h3>
+  <p>Los pedidos hechos antes de las 12:00 de lunes a jueves salen ese mismo día. Lo que entre jueves por la tarde o en fin de semana sale el lunes siguiente, para que el queso no pase el fin de semana en un almacén.</p>
+  <h3>Devoluciones</h3>
+  <p>El queso fresco es un producto perecedero y de consumo rápido: por ley no cabe desistimiento una vez entregado en buen estado. Si llega mal, caliente, roto o fuera de fecha, nos escribes el mismo día con una foto y te lo reponemos o te devolvemos el dinero. Sin discusiones.</p>
+  <h3>Pagos</h3>
+  <p>Los pagos con tarjeta los procesa Stripe. Nosotros nunca vemos ni guardamos el número de tu tarjeta.</p>
+  <h3>Contenidos</h3>
+  <p>Los textos, las fotos y el diseño de esta web son nuestros o están usados con permiso. No los copies sin pedirlo.</p>
+  <h3>Ley aplicable</h3>
+  <p>Se aplica la legislación española. Si algo sale mal y no lo arreglamos entre nosotros, puedes acudir a los organismos de consumo de Cantabria o a la plataforma europea de resolución de litigios en línea.</p>`,
+
+ privacidad: `<h2 id="legal-t">Privacidad</h2>
+  <div class="res">En resumen: usamos tus datos para prepararte el pedido, mandártelo y hacerte la factura. Nada más. No vendemos ni cedemos tus datos a nadie.</div>
+  <h3>Qué recogemos y para qué</h3>
+  <ul>
+   <li><b>Nombre, dirección, teléfono y correo</b> — para prepararte el pedido y que el transportista te lo lleve. Base legal: el contrato de compra.</li>
+   <li><b>Datos de facturación</b> — porque la ley nos obliga a emitir y conservar facturas.</li>
+   <li><b>Tu pedido</b> — qué compraste y cuándo, para atenderte si hay un problema.</li>
+   <li><b>Correo para ofertas</b> — solo si lo marcas tú. Puedes darte de baja en cualquier correo que te mandemos.</li>
+  </ul>
+  <h3>Quién más lo ve</h3>
+  <ul>
+   <li><b>Cloudflare</b> — aloja la web, con servidores en la Unión Europea.</li>
+   <li><b>Stripe</b> — procesa el pago. La tarjeta no la ve la quesería.</li>
+   <li><b>La empresa de transporte</b> — recibe tu nombre, dirección y teléfono para la entrega. Nada más.</li>
+   <li><b>Brevo</b> — envía los correos de confirmación.</li>
+   <li><b>Google</b> — si cargas el mapa, y las tipografías de la web.</li>
+   <li><b>Agencia JS</b> — mantiene la web; puede ver los pedidos al resolver una incidencia.</li>
+  </ul>
+  <p>No vendemos ni cedemos tus datos a nadie más.</p>
+  <h3>Cuánto lo guardamos</h3>
+  <p>Mientras seas cliente y un año más. <b>Las facturas, entre cuatro y seis años, porque la ley nos obliga</b>: esas no se pueden borrar aunque lo pidas.</p>
+  <h3>Tus derechos</h3>
+  <p>Puedes pedirnos una copia de tus datos, corregirlos, borrarlos o decirnos que dejemos de usarlos para ofertas. Escríbenos y lo hacemos. Si crees que no lo hemos hecho bien, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+  <h3>Menores</h3>
+  <p>Esta tienda es para mayores de 18 años.</p>`,
+
+ cookies: `<h2 id="legal-t">Cookies</h2>
+  <div class="res">En resumen: no te seguimos. No hay Google Analytics, no hay píxel de Facebook, no hay publicidad ni perfilado. Lo único que pide permiso es el mapa.</div>
+  <h3>Lo necesario</h3>
+  <ul>
+   <li><b>Tu cesta</b> — se queda en tu propio navegador mientras compras. No sale de tu dispositivo.</li>
+   <li><b>Tu decisión sobre el mapa</b> — se guarda en tu navegador para no volver a preguntarte.</li>
+   <li><b>El pago</b> — Stripe usa sus propias cookies en su pantalla de pago, para evitar fraudes.</li>
+  </ul>
+  <p>Nada de esto necesita tu permiso: sin ello la tienda no funciona.</p>
+  <h3>Lo que pide permiso</h3>
+  <p><b>El mapa de Google.</b> Si lo cargas, Google deja sus cookies y recibe tu IP. Por eso no se carga solo, y puedes llegar igual con el botón «Abrir en Google Maps», que no carga nada aquí.</p>
+  <h3>Lo que no hay</h3>
+  <p>Sin Google Analytics. Sin píxel de Facebook ni de TikTok. Sin publicidad. Sin perfilado. Sin venta de datos.</p>
+  <h3>La nota honesta</h3>
+  <p>Las tipografías de la web se sirven desde Google Fonts, que no deja cookies pero sí recibe tu dirección IP al cargar la página. Está previsto servirlas desde nuestro propio dominio.</p>
+  <h3>Cambiar de idea</h3>
+  <p>En el pie de la web tienes «Preferencias»: borra tu decisión y te volvemos a preguntar.</p>`
+};
+
+const PRODUCTOS = [
+  { id:"fresco-p", n:"Queso fresco pequeño", d:"De vaca, hecho esta mañana. Unos 500 g con su suero.", p:5.90, u:"aprox. 500 g", b:"Medalla de bronce", oro:true },
+  { id:"fresco-g", n:"Queso fresco grande", d:"El mismo queso premiado, en formato familiar. Alrededor de 1 kg.", p:10.90, u:"aprox. 1 kg", b:"El más vendido" },
+  { id:"membrillo", n:"Dulce de membrillo", d:"Artesano, hecho por nosotros. El acompañante de siempre.", p:4.50, u:"400 g" },
+  { id:"lote", n:"Lote degustación", d:"Dos quesos frescos pequeños y un membrillo. Para probarlo todo o para regalar.", p:19.90, u:"2 quesos + membrillo", b:"Para regalar" }
+];
+const ENVIO = 6.90, GRATIS = 45;
+const eur = n => n.toFixed(2).replace(".", ",") + " €";
+const $ = id => document.getElementById(id);
+let cesta = {};
+
+const ALT = {
+  "fresco-p": "Queso fresco pequeño de La Castreña sobre fondo crema",
+  "fresco-g": "Queso fresco grande con una porción cortada, por donde se ve la pasta",
+  "membrillo": "Taco de dulce de membrillo artesano con unas lonchas cortadas",
+  "lote": "Lote degustación: dos quesos frescos pequeños y un membrillo sobre tabla"
+};
+const foto = (id, sm) =>
+  `<img src="img/${id}${sm ? "-sm" : ""}.webp" alt="${sm ? "" : ALT[id]}" ${sm ? 'aria-hidden="true"' : ""} loading="lazy" decoding="async">`;
+
+function pintaCatalogo(){
+  $("catalogo").innerHTML = PRODUCTOS.map(p => `
+    <article class="pr">
+      <div class="pr-im">${foto(p.id)}${p.b ? `<span class="pr-b${p.oro ? " oro" : ""}">${p.b}</span>` : ""}</div>
+      <div class="pr-in">
+        <h3>${p.n}</h3>
+        <p class="pr-d">${p.d}</p>
+        <div class="pr-f">
+          <span class="precio">${eur(p.p)}<small>${p.u}</small></span>
+          <div class="qty" data-id="${p.id}">
+            <button type="button" data-d="-1" aria-label="Quitar uno">−</button>
+            <span data-q="${p.id}">0</span>
+            <button type="button" data-d="1" aria-label="Añadir uno">+</button>
+          </div>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+function cambia(id, d){
+  cesta[id] = Math.max(0, (cesta[id] || 0) + d);
+  if (!cesta[id]) delete cesta[id];
+  pinta();
+}
+
+function subtotal(){
+  return Object.entries(cesta).reduce((s,[id,q]) => s + PRODUCTOS.find(p => p.id === id).p * q, 0);
+}
+function envioActual(){
+  const r = document.querySelector('input[name="env"]:checked');
+  if (r && r.value === "recogida") return 0;
+  return subtotal() >= GRATIS ? 0 : ENVIO;
+}
+
+function pinta(){
+  const n = Object.values(cesta).reduce((a,b) => a+b, 0);
+  $("cart-n").textContent = n; $("cart-n").hidden = !n;
+  PRODUCTOS.forEach(p => { const e = document.querySelector(`[data-q="${p.id}"]`); if (e) e.textContent = cesta[p.id] || 0; });
+
+  const cuerpo = $("dr-b");
+  if (!n){
+    cuerpo.innerHTML = '<div class="vacio"><p style="font-size:2.4rem;margin-bottom:.6rem">🧀</p><p>Tu pedido está vacío.</p></div>';
+    $("dr-f").hidden = true;
+    return;
+  }
+  $("dr-f").hidden = false;
+  cuerpo.innerHTML = Object.entries(cesta).map(([id,q]) => {
+    const p = PRODUCTOS.find(x => x.id === id);
+    return `<div class="li">
+      <div class="li-im">${foto(id, true)}</div>
+      <div>
+        <h4>${p.n}</h4>
+        <div class="li-p">${eur(p.p)} · ${p.u}</div>
+        <div class="qty" data-id="${id}">
+          <button type="button" data-d="-1" aria-label="Quitar uno">−</button><span>${q}</span><button type="button" data-d="1" aria-label="Añadir uno">+</button>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  const sub = subtotal(), env = envioActual();
+  $("t-sub").textContent = eur(sub);
+  $("t-env").textContent = env ? eur(env) : "Gratis";
+  $("t-env-l").textContent = document.querySelector('input[name="env"]:checked').value === "recogida" ? "Recogida" : (sub >= GRATIS ? "Envío (gratis desde 45 €)" : "Envío");
+  $("t-tot").textContent = eur(sub + env);
+  $("p-tot").textContent = eur(sub + env);
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".qty button");
+  if (b){ cambia(b.parentElement.dataset.id, +b.dataset.d); return; }
+});
+document.addEventListener("change", e => { if (e.target.name === "env") pintaEnvio(); });
+
+function pintaEnvio(){
+  const rec = document.querySelector('input[name="env"]:checked').value === "recogida";
+  $("campo-dir").style.display = rec ? "none" : "";
+  $("campo-cp").style.display = rec ? "none" : "";
+  pinta();
+}
+
+const abrir = () => { $("dr").classList.add("on"); $("ov").classList.add("on"); };
+const cerrar = () => { $("dr").classList.remove("on"); $("ov").classList.remove("on"); };
+$("abrir-carrito").onclick = abrir;
+$("cerrar-carrito").onclick = cerrar;
+$("ov").onclick = cerrar;
+$("burger").onclick = () => $("nav").classList.toggle("on");
+document.querySelectorAll("nav a").forEach(a => a.onclick = () => $("nav").classList.remove("on"));
+
+$("ir-pagar").onclick = () => { cerrar(); $("pay").classList.add("on"); $("pay-in").style.display = ""; $("pay-ok").style.display = "none"; window.scrollTo(0,0); };
+$("pay-volver").onclick = () => { $("pay").classList.remove("on"); abrir(); };
+$("pagar").onclick = () => {
+  const rec = document.querySelector('input[name="env"]:checked').value === "recogida";
+  $("ok-txt").textContent = rec
+    ? "Te avisamos por WhatsApp en cuanto esté listo para recoger. Normalmente, en un par de horas."
+    : "Te hemos mandado un correo con el resumen. Tu queso se elabora la mañana del envío y te mandamos el seguimiento en cuanto salga.";
+  $("pay-in").style.display = "none";
+  $("pay-ok").style.display = "";
+  window.scrollTo(0,0);
+};
+$("ok-cerrar").onclick = () => { cesta = {}; pinta(); $("pay").classList.remove("on"); };
+
+/* ---- páginas legales ---- */
+const ov = $("legal-ov");
+let ultimoFoco = null;
+function abreLegal(k){
+  ultimoFoco = document.activeElement;
+  $("legal-body").innerHTML = LEGAL[k];
+  ov.classList.add("on");
+  document.body.style.overflow = "hidden";
+  $("legal-x").focus();
+}
+function cierraLegal(){
+  ov.classList.remove("on");
+  document.body.style.overflow = "";
+  if (ultimoFoco) ultimoFoco.focus();
+}
+document.querySelectorAll("[data-legal]").forEach(a => a.onclick = e => { e.preventDefault(); abreLegal(a.dataset.legal); });
+$("legal-x").onclick = cierraLegal;
+ov.onclick = e => { if (e.target === ov) cierraLegal(); };
+document.addEventListener("keydown", e => { if (e.key === "Escape" && ov.classList.contains("on")) cierraLegal(); });
+
+/* ---- cookies y mapa con permiso ---- */
+const CK = "castrena-mapa";
+const leeCk = () => { try { return localStorage.getItem(CK); } catch(e) { return null; } };
+const guardaCk = v => { try { localStorage.setItem(CK, v); } catch(e) {} };
+
+function pintaMapas(permiso){
+  document.querySelectorAll(".ubi-m").forEach(m => {
+    if (permiso) {
+      m.innerHTML = `<iframe src="${m.dataset.mapa}" title="${m.dataset.titulo}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+    } else {
+      m.innerHTML = `<div class="mapa-off">
+        <p>El mapa de Google deja cookies suyas, así que no lo cargamos sin tu permiso.</p>
+        <div class="mapa-b">
+          <button type="button" data-ver>Ver el mapa</button>
+          <a href="${m.dataset.comollegar}" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </div></div>`;
+      m.querySelector("[data-ver]").onclick = () => {
+        m.innerHTML = `<iframe src="${m.dataset.mapa}" title="${m.dataset.titulo}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+      };
+    }
+  });
+}
+
+const d = leeCk();
+pintaMapas(d === "si");
+if (!d) setTimeout(() => $("ck").classList.add("on"), 1200);
+$("ck-si").onclick = () => { guardaCk("si"); $("ck").classList.remove("on"); pintaMapas(true); };
+$("ck-no").onclick = () => { guardaCk("no"); $("ck").classList.remove("on"); pintaMapas(false); };
+document.querySelectorAll("[data-cookies]").forEach(a => a.onclick = e => {
+  e.preventDefault();
+  try { localStorage.removeItem(CK); } catch(err) {}
+  pintaMapas(false);
+  $("ck").classList.add("on");
+  $("ck").scrollIntoView({ block: "nearest" });
+});
+
+pintaCatalogo();
+pinta();
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Quesería La Castreña — demo estática en Cloudflare Workers
+name = "castrena-demo"
+compatibility_date = "2026-11-19"
+
+[assets]
+directory = "./web"
+not_found_handling = "none"
