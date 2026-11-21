@@ -158,6 +158,29 @@ section{padding:4rem 0}
 .aviso-env{margin-top:1.6rem;background:rgba(232,217,168,.13);border:1px solid rgba(232,217,168,.3);border-radius:14px;padding:1.1rem 1.3rem;font-size:.92rem;color:#efe6cd}
 .aviso-env b{color:#fff}
 
+/* cómo se come */
+#recetas{background:var(--papel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.recs{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.2rem}
+.rec{background:var(--crema);border:1px solid var(--linea);border-radius:16px;padding:1.4rem 1.3rem}
+.rec .em{font-size:1.9rem;line-height:1;margin-bottom:.7rem;display:block}
+.rec h3{font-size:1.08rem;margin-bottom:.4rem}
+.rec p{font-size:.9rem;color:var(--gris)}
+
+/* encargos */
+.enc{background:#fff;border:1px solid var(--linea);border-left:4px solid var(--oro);border-radius:14px;padding:1.4rem 1.5rem;margin-top:2rem;display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:center}
+.enc h3{font-size:1.15rem;margin-bottom:.35rem}
+.enc p{font-size:.92rem;color:var(--gris);max-width:44rem}
+
+/* dónde nos vas a encontrar */
+.citas{display:grid;gap:.9rem;max-width:46rem;margin:0 auto}
+.cita{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:14px;padding:1rem 1.2rem}
+.cita .fe{background:var(--verde);color:#fff;border-radius:12px;width:62px;padding:.5rem 0;text-align:center;flex:none}
+.cita .fe b{display:block;font-family:Fraunces,serif;font-size:1.5rem;line-height:1}
+.cita .fe span{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}
+.cita h3{font-size:1.05rem;margin-bottom:.15rem}
+.cita p{font-size:.88rem;color:var(--gris)}
+.sin-citas{text-align:center;color:var(--gris);font-size:.95rem}
+
 /* opiniones */
 .ops{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:1.3rem}
 .op{background:var(--papel);border:1px solid var(--linea);border-radius:16px;padding:1.4rem 1.5rem}
@@ -233,6 +256,7 @@ footer a:hover{color:#fff}
   <nav id="nav">
    <a href="#tienda">Tienda</a>
    <a href="#envios">Cómo comprar</a>
+   <a href="#recetas">Ideas</a>
    <a href="#nosotros">Quiénes somos</a>
    <a href="#tiendas">Dónde estamos</a>
   </nav>
@@ -285,6 +309,23 @@ footer a:hover{color:#fff}
  </div>
 </section>
 
+<!-- CÓMO SE COME -->
+<section id="recetas">
+ <div class="wrap">
+  <div class="sec-h">
+   <p class="kick">Ideas</p>
+   <h2>Cómo se come un queso fresco</h2>
+   <p>No hace falta complicarse. Estas cuatro son las que nos piden en el mostrador.</p>
+  </div>
+  <div class="recs">
+   <div class="rec"><span class="em">🍯</span><h3>Con miel y nueces</h3><p>La de toda la vida, y la que nunca falla. Un chorrito de miel por encima y unas nueces partidas. De postre o de desayuno.</p></div>
+   <div class="rec"><span class="em">🍮</span><h3>Con nuestro membrillo</h3><p>Una loncha de queso y una de membrillo. Si solo vas a probar una cosa de las que hacemos, que sea esta.</p></div>
+   <div class="rec"><span class="em">🥗</span><h3>En ensalada</h3><p>En dados, con tomate de verdad, un buen aceite y orégano. Aguanta sin deshacerse y deja la ensalada hecha un plato.</p></div>
+   <div class="rec"><span class="em">🔥</span><h3>A la plancha</h3><p>En rodajas de un dedo, vuelta y vuelta en la sartén bien caliente. Por fuera dorado y por dentro cremoso.</p></div>
+  </div>
+ </div>
+</section>
+
 <!-- CÓMO CONSEGUIRLO -->
 <section id="envios">
  <div class="wrap">
@@ -300,6 +341,14 @@ footer a:hover{color:#fff}
    <div class="paso"><div class="n">3</div><h3>Lo recoges donde te venga bien</h3><p>En el obrador de Islares, en la tienda de Sestao o en el puesto del mercado de Castro.</p></div>
   </div>
 
+  <div class="enc">
+   <div>
+    <h3>¿Un encargo grande?</h3>
+    <p>Bautizos, comuniones, cenas de empresa, restaurantes y tiendas. Preparamos la cantidad que necesites;
+     para pedidos grandes, avísanos con un par de días y lo tienes recién hecho el día que lo recoges.</p>
+   </div>
+   <a class="btn btn-p btn-sm" href="https://wa.me/34699579993?text=Hola%2C%20quer%C3%ADa%20hacer%20un%20encargo%20grande" target="_blank" rel="noopener">Hablamos por WhatsApp</a>
+  </div>
   <div class="nota-env">
    <b>¿Hacemos envíos a casa?</b> Todavía no. El queso fresco es delicado y preferimos no mandarlo
    antes de poder garantizar que llega como sale del obrador. Si te interesa, escríbenos y te
@@ -381,6 +430,20 @@ footer a:hover{color:#fff}
  </div>
 </section>
 
+<!-- FERIAS Y MERCADOS -->
+<section id="ferias">
+ <div class="wrap">
+  <div class="sec-h">
+   <p class="kick">Fuera de casa</p>
+   <h2>Dónde nos vas a encontrar</h2>
+   <p>Salimos a ferias y mercados por toda Cantabria y el País Vasco. Aquí avisamos de las próximas.</p>
+  </div>
+  <div class="citas" id="citas"></div>
+  <p class="nota-precio"><b>Ejemplo de la demo:</b> estas citas son de muestra, para que se vea cómo queda.
+   Las de verdad las pones tú desde tu panel, y aquí aparecen solas.</p>
+ </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
  <div class="wrap" style="max-width:780px">
@@ -403,7 +466,7 @@ footer a:hover{color:#fff}
     </div>
     <p style="max-width:22rem">Queso fresco de vaca elaborado cada día en Islares, Castro Urdiales. Bronce en los World Cheese Awards 2026.</p>
    </div>
-   <div><h4>La tienda</h4><div class="ft-l"><a href="#tienda">Productos</a><a href="#envios">Cómo comprar</a><a href="#faq">Preguntas frecuentes</a></div></div>
+   <div><h4>La tienda</h4><div class="ft-l"><a href="#tienda">Productos</a><a href="#envios">Cómo comprar</a><a href="#ferias">Ferias y mercados</a><a href="#faq">Preguntas frecuentes</a></div></div>
    <div><h4>Contacto</h4><div class="ft-l"><a href="tel:+34699579993">699 57 99 93</a><a href="https://wa.me/34699579993" target="_blank" rel="noopener">WhatsApp</a><a href="#tiendas">Islares y Sestao</a></div></div>
   </div>
   <div class="ft-b">
@@ -591,6 +654,32 @@ function pintaCatalogo(){
     </article>`).join("");
 }
 
+
+/* Ferias y mercados. Las pasadas desaparecen solas: nadie quiere ver en enero
+   una feria de noviembre. Vienen de aquí hoy; del panel cuando se monte. */
+const CITAS = [
+  { f:"2026-12-06", n:"Mercado de Navidad de Castro Urdiales", d:"Plaza del Ayuntamiento · todo el día" },
+  { f:"2026-12-13", n:"Feria de productores de Laredo", d:"Puerto Viejo · de 10:00 a 15:00" },
+  { f:"2026-12-20", n:"Mercado navideño de Ramales", d:"Plaza de la Constitución · mañana" }
+];
+const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+function pintaCitas(){
+  const caja = $("citas"); if (!caja) return;
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const prox = CITAS.filter(c => new Date(c.f + "T00:00:00") >= hoy).sort((a,b) => a.f < b.f ? -1 : 1);
+  if (!prox.length){
+    caja.innerHTML = '<p class="sin-citas">Ahora mismo no tenemos ninguna feria cerrada. Escríbenos y te lo decimos.</p>';
+    return;
+  }
+  caja.innerHTML = prox.map(c => {
+    const d = new Date(c.f + "T00:00:00");
+    return `<article class="cita">
+      <div class="fe"><b>${d.getDate()}</b><span>${MESES[d.getMonth()]}</span></div>
+      <div><h3>${c.n}</h3><p>${c.d}</p></div>
+    </article>`;
+  }).join("");
+}
+
 /* menú del móvil */
 $("burger").onclick = () => $("nav").classList.toggle("on");
 document.querySelectorAll("nav a").forEach(a => a.onclick = () => $("nav").classList.remove("on"));
@@ -652,6 +741,7 @@ document.querySelectorAll("[data-cookies]").forEach(a => a.onclick = e => {
 });
 
 pintaCatalogo();
+pintaCitas();
 </script>
 </body>
 </html>
